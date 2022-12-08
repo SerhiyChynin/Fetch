@@ -54,3 +54,19 @@ fetch("http://getpost.itgid.info/index2.php", {
     .then(response => {
         console.log(response);
     })
+
+    // home work
+
+// let out = "";
+document.querySelector('.button').onclick = () =>  document.querySelector('.out').innerHTML =   fetch('http://getpost.itgid.info/index2.php?auth=zhrgB3Dxc8LoG7Gcilzg&action=1&name=Serhii')
+    .then(data => {
+     document.querySelector('.out').textContent = data.statusText + " - " + data.status;
+     console.log(data);
+    })
+
+document.querySelector('.button2').onclick = () =>  document.querySelector('.out1').innerHTML =  fetch('http://getpost.itgid.info/index2.php?auth=zhrgB3Dxc8LoG7Gcilzg&action=1&name=Serhii')
+    .then(data => {
+     document.querySelector('.out1').textContent = data.ok;
+     console.log(data);
+})
+
